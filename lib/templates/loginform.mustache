@@ -187,30 +187,6 @@
             <a class="btn btn-secondary" href="{{signupurl}}">{{#str}}startsignup{{/str}}</a>
         </div>
     {{/cansignup}}
-    {{#canloginasguest}}
-        <div class="login-divider"></div>
-        <h2 class="login-heading">{{#str}}someallowguest{{/str}}</h2>
-        <form action="{{loginurl}}" method="post" id="guestlogin">
-            <input type="hidden" name="logintoken" value="{{logintoken}}">
-            <input type="hidden" name="username" value="guest" />
-            <input type="hidden" name="password" value="guest" />
-            <button class="btn btn-secondary" type="submit" id="loginguestbtn">{{#str}}loginguest{{/str}}</button>
-        </form>
-    {{/canloginasguest}}
-    <div class="login-divider"></div>
-    <div class="d-flex">
-        {{#languagemenu}}
-            <div class="login-languagemenu">
-                {{>core/action_menu}}
-            </div>
-            <div class="divider border-start align-self-center mx-3"></div>
-        {{/languagemenu}}
-        <button type="button" class="btn btn-secondary" {{!
-        }} data-modal="alert"{{!
-        }} data-modal-title-str='["cookiesenabled", "core"]' {{!
-        }} data-modal-content-str='["cookiesenabled_help_html", "core"]'{{!
-        }}>{{#str}}cookiesnotice{{/str}}</button>
-    </div>
 </div>
 
 {{#js}}
